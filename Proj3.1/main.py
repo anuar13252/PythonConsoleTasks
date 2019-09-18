@@ -10,7 +10,8 @@ def input_array(row, column):
     for i in range(0, row):
         sub_array = []
         for j in range(column):
-            number = int(input('Введите число:\t'))
+            print('Введите число [ ', i, ' ]', '[ ', j, ' ]:')
+            number = int(input())
             sub_array.append(number)
         array.append(sub_array)
     return array
@@ -29,7 +30,7 @@ def search_minEl(min_eL, array):
         for j in i:
             if min_eL > j:
                 min_eL = j
-    return min_eL 
+    return min_eL
 
 # Выполнение условия задачи
 def solve_task(array, min_elem):
@@ -43,7 +44,7 @@ def solve_task(array, min_elem):
 
 
 def main():
-    array = input_array(4, 5)
+    array = input_array(3, 3)
     output_array(array)
     # Задаем мин элемент
     min_elem = array[0][0]
